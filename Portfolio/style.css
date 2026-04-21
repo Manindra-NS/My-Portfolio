@@ -1,0 +1,290 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: rgb(11, 2, 29);
+    color:antiquewhite;
+}
+.divp{
+    background: radial-gradient(
+    circle,
+    rgba(14, 114, 92, 0.6) 0%,   /* center (darker) */
+    rgba(14, 114, 92, 0.2) 40%,
+    rgba(14, 114, 92, 0.17) 40%,
+    rgba(14, 114, 92, 0) 100%   /* fully transparent edges */
+  );
+    border: none;
+    border-radius: 50%;
+}
+.divabt{
+    background: radial-gradient(
+    circle,
+    rgba(255, 77, 210,0.5) 0%,   /* center (darker) */
+    rgba(255, 77, 210, 0.2) 40%,
+    rgba(255, 77, 210, 0.14) 40%,
+    rgba(255, 77, 210, 0) 100%   /* fully transparent edges */
+  );
+    border: none;
+    border-radius: 50%;
+}
+.div1{
+    position: absolute;
+    top:-150px;
+    left: -150px;
+    width:50vmin;
+    height:50vmin;
+    z-index: -1;
+}
+.div2{
+    position: absolute;
+    top:400px;
+    left: 320px;
+    width:60vmin;
+    height:60vmin;
+    z-index: -1;
+}
+.div3{
+     position: absolute;
+    top:200px;
+    left: 1000px;
+    width:60vmin;
+    height:60vmin;
+    z-index: -1;
+}
+#Namelogo{
+    font-family:  "Boldonse", system-ui;;
+    font-size: 2rem;
+    margin: 10px 0px 0px 15px;
+}
+.header{
+    display: flex;
+}
+.logo{
+    width:40%;
+}
+.links{
+    position: absolute;
+    right: 8px;
+    top:30px;
+    display: flex;
+    width:60%;
+    justify-content: space-around;
+    font-family: "Boldonse", system-ui;
+    font-size: 0.8rem;
+}
+.links a{
+    text-decoration: none;
+    color:antiquewhite;
+}
+.body{
+    display:flex;
+}
+.profileimg{
+    width:50%;
+    height:100vmin;
+    background-image: url(Profile.png);
+    background-size: cover;
+    position: relative;
+    padding-left: 5vmin;
+}
+.profileimg:hover{
+  background-image: url("Profilehover.png");
+}
+.bodytext{
+    padding-left:25px;
+}
+.name{
+    font-family: "Boldonse", system-ui;
+    font-size: 2.25rem;
+    position: relative;
+    top:20vmin;
+    text-shadow: 
+        4px 4px 4px rgb(255, 61, 236),
+        -5px -5px 5px rgba(26, 101, 78, 0.762);   
+    align-self: center;
+}
+#hello{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    text-shadow: none;
+}
+#hello1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    text-shadow: none;  
+}
+.profession{
+    position: relative;
+    top: 30vmin;
+}
+@keyframes fadeSlideDown {
+  to {
+    opacity: 1;
+    transform: translateX(0); /* move to normal position */
+  }
+}
+.fade-slide {
+  opacity: 0;
+  transform: translateY(-50px); /* start above */
+  animation: fadeSlideDown 0.8s ease-out forwards;
+}
+.fade-slide-prof{
+  opacity: 0;
+  transform: translateY(-50px); /* start above */
+  animation: fadeSlideDown 0.8s ease-out forwards;
+    animation-delay: 0.5s; /* delay for profession */
+}
+.fade-slide-left1 {
+  opacity: 0;
+  transform: translateX(-60px); /* start above */
+  animation: fadeSlideDown 0.8s ease-out forwards;
+}
+.fade-slide-left2 {
+  opacity: 0;
+  transform: translateX(-60px); /* start above */
+  animation: fadeSlideDown 0.8s ease-out forwards;
+  animation-delay: 0.8s;
+}
+@media (max-width: 1100px) {
+    .profileimg {
+        width:80% ;
+    }
+    .body {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .bodytext {
+        padding: 20px; 
+    }
+    .div1{
+        display: none;
+    }
+    .div2{
+        display: none;
+    }
+}
+body {
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slide-up {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.slide-down {
+  transform: translateY(100%);
+  opacity: 0;
+}
+.abtmain{
+    display:flex;
+}
+
+.about-img{
+    width:50%;
+    height:100vmin;
+    background-image:url(about.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin-left:1vmin;
+}
+.about-img:hover{
+  background-image: url(abouthover.png);  
+}
+#bio{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    text-shadow: none; 
+}
+#h1decor{
+    font-family: "Boldonse", system-ui ;
+    font-size: 1.7rem;
+} 
+.aboutbody{
+    z-index: 1;
+    padding-left: 20px;
+    padding-top: 50px;
+}
+.skills{
+    padding-top: 30px;
+}
+.frontendrow1{
+    height:14vmin;
+    width:80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 0px 15px 0px;
+}
+.skilldes{
+    height:13vmin;
+    width:13vmin; 
+    border-radius: 30%;
+}
+.skilldes:hover{
+    transform:scale(1.1,1.1);
+}
+.html{
+    background-image: url(html5.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.css{
+    background-image: url(CSS.png);
+    background-size: cover;
+}
+.javascript{
+    background-image: url(javascript.png);
+    background-size: cover;
+}
+.backend{
+    display: none;
+}
+.python{
+    background-image: url(Python.png);
+    background-size: cover;
+}
+.C{
+    background-image: url(C_Logo.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.Java{
+    background-image: url(java.webp);
+    background-size: cover;
+}
+.cplus{
+    background-image: url(c++.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.msword{
+    background-image: url(msword.png);
+    background-size: cover;
+}
+.msexcel{
+    background-image: url(msexcel.png);
+    background-size: cover;
+}
+.mspp{
+    background-image: url(mspp.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+@media (max-width: 1100px) {
+    .about-img {
+        width:100% ;
+    }
+    .abtmain {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .skills {
+        padding: 20px; 
+    }
+    .div3{
+        display: none;
+    }
+}
+
