@@ -20,9 +20,9 @@ body{
 .divabt{
     background: radial-gradient(
     circle,
-    rgba(255, 77, 210,0.5) 0%,   /* center (darker) */
-    rgba(255, 77, 210, 0.2) 40%,
-    rgba(255, 77, 210, 0.14) 40%,
+    rgba(255, 77, 210,0.65) 0%,   /* center (darker) */
+    rgba(255, 77, 211, 0.185) 40%,
+    rgba(255, 77, 211, 0.178) 40%,
     rgba(255, 77, 210, 0) 100%   /* fully transparent edges */
   );
     border: none;
@@ -149,6 +149,8 @@ body{
 @media (max-width: 1100px) {
     .profileimg {
         width:80% ;
+        position:relative;
+        top:580px;
     }
     .body {
         flex-direction: column; 
@@ -156,12 +158,24 @@ body{
     }
     .bodytext {
         padding: 20px; 
+        position: absolute;
+        top:0px;
+        z-index: -1;
+    
     }
     .div1{
-        display: none;
+        position: absolute;
+        top:-50px;
+        left:-70px;
     }
+    
     .div2{
-        display: none;
+        position: absolute;
+        left:140px;
+        top:700px;
+    }
+    header{
+        z-index: 1;
     }
 }
 body {
@@ -284,7 +298,12 @@ body {
         padding: 20px; 
     }
     .div3{
-        display: none;
+        position: absolute;
+        left:-160px;
+        top:600px;
     }
 }
-
+.logo a{
+    text-decoration: none;
+    color: inherit;
+}
